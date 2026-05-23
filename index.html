@@ -648,6 +648,12 @@
             cursor: pointer; transition: background 0.2s;
         }
         .form-submit:hover { background: var(--sage-dark); }
+        .form-error {
+            color: var(--coral);
+            font-size: 0.78rem;
+            margin-top: 4px;
+            font-weight: 500;
+        }
 
         /* FOOTER */
         footer {
@@ -1304,29 +1310,28 @@
         const form = e.target;
         const btn = form.querySelector('.form-submit');
 
-        // Validation
+        // Clear previous errors
+        form.querySelectorAll('.form-error').forEach(el => el.remove());
+
         const email = form.querySelector('#email').value;
         const name = form.querySelector('#name').value;
         const phone = form.querySelector('#phone').value;
+        let hasError = false;
 
-        // Check name is at least 2 words
-        if (name.trim().split(/\s+/).length < 2) {
-            alert('Please enter your full name (first and last name).');
-            return;
+        function showError(fieldId, msg) {
+            const field = form.querySelector('#' + fieldId);
+            const err = document.createElement('div');
+            err.className = 'form-error';
+            err.textContent = msg;
+            field.parentNode.appendChild(err);
+            hasError = true;
         }
 
-        // Check email format
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-        if (!emailPattern.test(email)) {
-            alert('Please enter a valid email address.');
-            return;
-        }
+        if (name.trim().split(/\s+/).length < 2) showError('name', 'Please enter your first and last name.');
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) showError('email', 'Please enter a valid email address.');
+        if (phone && !/^[\d\s+()-]{10,15}$/.test(phone)) showError('phone', 'Please enter a valid UK phone number.');
 
-        // Check phone format if provided
-        if (phone && !/^[\d\s+()-]{10,15}$/.test(phone)) {
-            alert('Please enter a valid UK phone number.');
-            return;
-        }
+        if (hasError) return;
 
         const orig = btn.textContent;
         btn.textContent = 'Sending...';
