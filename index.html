@@ -1207,6 +1207,7 @@
             </div>
             <div class="contact-form fade-in">
                 <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Your Name</label>
@@ -1302,6 +1303,31 @@
         e.preventDefault();
         const form = e.target;
         const btn = form.querySelector('.form-submit');
+
+        // Validation
+        const email = form.querySelector('#email').value;
+        const name = form.querySelector('#name').value;
+        const phone = form.querySelector('#phone').value;
+
+        // Check name is at least 2 words
+        if (name.trim().split(/\s+/).length < 2) {
+            alert('Please enter your full name (first and last name).');
+            return;
+        }
+
+        // Check email format
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+        if (!emailPattern.test(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        // Check phone format if provided
+        if (phone && !/^[\d\s+()-]{10,15}$/.test(phone)) {
+            alert('Please enter a valid UK phone number.');
+            return;
+        }
+
         const orig = btn.textContent;
         btn.textContent = 'Sending...';
         btn.disabled = true;
