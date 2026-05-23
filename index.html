@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maths with Shaily | GCSE & A-Level Maths Tutor Online</title>
+    <link rel="icon" type="image/png" href="/icon.png">
+    <link rel="apple-touch-icon" href="/icon.png">
     <meta name="description" content="Qualified maths tutor (QTS) offering GCSE & A-Level tutoring online. Patient, structured lessons that build confidence. 1:1 and small group sessions. First lesson free.">
     <meta name="keywords" content="maths tutor, GCSE maths, A-Level maths, online maths tutor, maths tutor Woodford Green, private maths tutor London, adult maths tutor, GCSE resit maths">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://formspree.io;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data:;">
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:title" content="Maths with Shaily | GCSE & A-Level Maths Tutor Online">
     <meta property="og:description" content="Qualified teacher (QTS) offering patient, structured maths tutoring for GCSE, A-Level and adult learners. 1:1 and small group sessions online. First lesson free.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://maths.talvika.com">
+    <meta property="og:image" content="https://maths.talvika.com/logo.png">
 
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -117,11 +120,8 @@
             display: flex; align-items: center; justify-content: space-between;
             height: 64px;
         }
-        .nav-logo {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.25rem; color: var(--sage-dark);
-            text-decoration: none;
-        }
+        .nav-logo { text-decoration: none; display: flex; align-items: center; }
+        .nav-logo-img { height: 36px; width: auto; }
         .nav-logo span { color: var(--coral); }
         .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
         .nav-links a {
@@ -648,12 +648,6 @@
             cursor: pointer; transition: background 0.2s;
         }
         .form-submit:hover { background: var(--sage-dark); }
-        .form-error {
-            color: var(--coral);
-            font-size: 0.78rem;
-            margin-top: 4px;
-            font-weight: 500;
-        }
 
         /* FOOTER */
         footer {
@@ -722,7 +716,7 @@
 <!-- NAV -->
 <nav id="navbar">
     <div class="container">
-        <a href="#" class="nav-logo">Maths <span>with</span> Shaily</a>
+        <a href="#" class="nav-logo"><img src="/logo.png" alt="Maths with Shaily" class="nav-logo-img"></a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#about" onclick="closeMenu()">About</a></li>
             <li><a href="#approach" onclick="closeMenu()">Approach</a></li>
@@ -1213,7 +1207,6 @@
             </div>
             <div class="contact-form fade-in">
                 <form id="contactForm" onsubmit="handleSubmit(event)">
-                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Your Name</label>
@@ -1273,6 +1266,9 @@
         <p style="margin-top:8px;">
             <a href="#about">About</a> · <a href="#approach">Approach</a> · <a href="#pricing">Pricing</a> · <a href="#contact">Contact</a>
         </p>
+        <p style="margin-top:8px;">
+            <a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms of Service</a>
+        </p>
         <p style="margin-top:16px; font-size:0.78rem;">&copy; 2026 Maths with Shaily. All rights reserved.</p>
     </div>
 </footer>
@@ -1305,58 +1301,18 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+    // Form handler (replace with Formspree or similar)
     function handleSubmit(e) {
         e.preventDefault();
-        const form = e.target;
-        const btn = form.querySelector('.form-submit');
-
-        // Clear previous errors
-        form.querySelectorAll('.form-error').forEach(el => el.remove());
-
-        const email = form.querySelector('#email').value;
-        const name = form.querySelector('#name').value;
-        const phone = form.querySelector('#phone').value;
-        let hasError = false;
-
-        function showError(fieldId, msg) {
-            const field = form.querySelector('#' + fieldId);
-            const err = document.createElement('div');
-            err.className = 'form-error';
-            err.textContent = msg;
-            field.parentNode.appendChild(err);
-            hasError = true;
-        }
-
-        if (name.trim().split(/\s+/).length < 2) showError('name', 'Please enter your first and last name.');
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) showError('email', 'Please enter a valid email address.');
-        if (phone && !/^[\d\s+()-]{10,15}$/.test(phone)) showError('phone', 'Please enter a valid UK phone number.');
-
-        if (hasError) return;
-
+        const btn = e.target.querySelector('.form-submit');
         const orig = btn.textContent;
-        btn.textContent = 'Sending...';
-        btn.disabled = true;
-
-        fetch('https://formspree.io/f/xvzyqrkn', {
-            method: 'POST',
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-        }).then(response => {
-            if (response.ok) {
-                btn.textContent = '✓ Message Sent — I\'ll be in touch soon!';
-                btn.style.background = '#3D5A4B';
-                form.reset();
-                setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.disabled = false; }, 4000);
-            } else {
-                btn.textContent = 'Something went wrong — please try again';
-                btn.style.background = '#E8836B';
-                setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.disabled = false; }, 3000);
-            }
-        }).catch(() => {
-            btn.textContent = 'Connection error — please try again';
-            btn.style.background = '#E8836B';
-            setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.disabled = false; }, 3000);
-        });
+        btn.textContent = '✓ Message Sent — I\'ll be in touch soon!';
+        btn.style.background = '#3D5A4B';
+        setTimeout(() => {
+            btn.textContent = orig;
+            btn.style.background = '';
+            e.target.reset();
+        }, 4000);
     }
 </script>
 
