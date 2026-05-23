@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths with Shaily | GCSE & A-Level Maths Tutor Online</title>
+    <meta name="description" content="Qualified maths tutor (QTS) offering GCSE & A-Level tutoring online. Patient, structured lessons that build confidence. 1:1 and small group sessions. First lesson free.">
+    <meta name="keywords" content="maths tutor, GCSE maths, A-Level maths, online maths tutor, maths tutor Woodford Green, private maths tutor London, adult maths tutor, GCSE resit maths">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Maths with Shaily | GCSE & A-Level Maths Tutor Online">
+    <meta property="og:description" content="Qualified teacher (QTS) offering patient, structured maths tutoring for GCSE, A-Level and adult learners. 1:1 and small group sessions online. First lesson free.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maths.talvika.com">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Maths with Shaily",
+        "description": "Qualified maths tutor (QTS) offering GCSE & A-Level tutoring online. Patient, structured lessons that build confidence.",
+        "url": "https://maths.talvika.com",
+        "email": "maths@talvika.com",
+        "areaServed": "United Kingdom",
+        "founder": {
+            "@type": "Person",
+            "name": "Shaily",
+            "jobTitle": "Qualified Maths Tutor",
+            "hasCredential": {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Qualified Teacher Status (QTS)"
+            }
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Maths Tutoring Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "name": "Single 1:1 Online Lesson",
+                    "price": "25",
+                    "priceCurrency": "GBP"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "5-Lesson Pack",
+                    "price": "115",
+                    "priceCurrency": "GBP"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "10-Lesson Pack",
+                    "price": "210",
+                    "priceCurrency": "GBP"
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "7"
+        }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cream: #FDF8F4;
+            --warm-white: #FFFCFA;
+            --sage: #5B7B6A;
+            --sage-light: #E8F0EB;
+            --sage-dark: #3D5A4B;
+            --charcoal: #2C2C2C;
+            --text: #3A3A3A;
+            --text-light: #6B6B6B;
+            --coral: #E8836B;
+            --coral-light: #FFF0EC;
+            --gold: #D4A853;
+            --gold-light: #FFF8EC;
+            --border: #E8E2DC;
+            --radius: 12px;
+            --blue: #4A7FB5;
+            --blue-light: #EBF2F9;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            background: var(--warm-white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 { font-family: 'DM Serif Display', serif; font-weight: 400; line-height: 1.25; }
+
+        .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(253, 248, 244, 0.92);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            transition: box-shadow 0.3s;
+        }
+        nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+        nav .container {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 64px;
+        }
+        .nav-logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.25rem; color: var(--sage-dark);
+            text-decoration: none;
+        }
+        .nav-logo span { color: var(--coral); }
+        .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+        .nav-links a {
+            text-decoration: none; color: var(--text-light);
+            font-size: 0.9rem; font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--sage-dark); }
+        .nav-cta {
+            background: var(--sage); color: white !important;
+            padding: 8px 20px; border-radius: 8px;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover { background: var(--sage-dark); color: white; }
+
+        .hamburger {
+            display: none; background: none; border: none; cursor: pointer;
+            width: 28px; height: 20px; position: relative; z-index: 101;
+        }
+        .hamburger span {
+            display: block; width: 100%; height: 2px; background: var(--charcoal);
+            position: absolute; left: 0; transition: all 0.3s;
+        }
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 9px; }
+        .hamburger span:nth-child(3) { top: 18px; }
+        .hamburger.open span:nth-child(1) { transform: rotate(45deg); top: 9px; }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: rotate(-45deg); top: 9px; }
+
+        /* HERO */
+        .hero {
+            padding: 140px 0 80px;
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute; top: -120px; right: -120px;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(91,123,106,0.07) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: var(--gold-light);
+            color: var(--gold);
+            font-size: 0.82rem; font-weight: 600;
+            padding: 6px 14px; border-radius: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
+        }
+        .hero h1 { font-size: clamp(2.2rem, 4.5vw, 3.2rem); color: var(--charcoal); margin-bottom: 20px; }
+        .hero h1 em { font-style: normal; color: var(--sage); }
+        .hero-desc {
+            font-size: 1.08rem; color: var(--text-light);
+            margin-bottom: 32px; max-width: 500px;
+        }
+        .hero-stats {
+            display: flex; gap: 28px; margin-bottom: 36px;
+        }
+        .hero-stat { text-align: center; }
+        .hero-stat-num {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem; color: var(--sage-dark);
+        }
+        .hero-stat-label { font-size: 0.76rem; color: var(--text-light); margin-top: 2px; }
+
+        .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 28px; border-radius: 10px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem; font-weight: 600;
+            text-decoration: none; border: none; cursor: pointer;
+            transition: all 0.25s;
+        }
+        .btn-primary { background: var(--sage); color: white; }
+        .btn-primary:hover { background: var(--sage-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(91,123,106,0.25); }
+        .btn-secondary { background: white; color: var(--sage-dark); border: 1.5px solid var(--border); }
+        .btn-secondary:hover { border-color: var(--sage); background: var(--sage-light); }
+
+        .hero-visual {
+            display: flex; justify-content: center; align-items: center;
+            position: relative;
+        }
+        .hero-card {
+            background: white;
+            border-radius: 20px;
+            padding: 36px 32px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            position: relative;
+            width: 100%;
+            max-width: 380px;
+        }
+        .hero-card-icon {
+            width: 56px; height: 56px;
+            background: var(--sage-light);
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+        }
+        .hero-card h3 { font-size: 1.2rem; margin-bottom: 8px; color: var(--charcoal); }
+        .hero-card p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 18px; }
+        .hero-card-levels {
+            display: flex; flex-wrap: wrap; gap: 8px;
+        }
+        .level-tag {
+            padding: 5px 14px; border-radius: 20px;
+            font-size: 0.78rem; font-weight: 500;
+            background: var(--cream); color: var(--text);
+        }
+        .float-tag {
+            position: absolute;
+            background: white;
+            padding: 10px 16px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            font-size: 0.82rem; font-weight: 500;
+            display: flex; align-items: center; gap: 6px;
+            animation: float 3s ease-in-out infinite;
+        }
+        .float-tag.tag-rating { top: -10px; right: -20px; }
+        .float-tag.tag-free { bottom: 30px; left: -30px; color: var(--coral); }
+        .float-tag.tag-online { top: 50%; left: -40px; color: var(--blue); animation-delay: 1.5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* SECTION COMMON */
+        section { padding: 80px 0; }
+        .section-label {
+            font-size: 0.78rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.12em;
+            color: var(--sage); margin-bottom: 12px;
+        }
+        .section-title {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            color: var(--charcoal); margin-bottom: 16px;
+        }
+        .section-desc {
+            font-size: 1.02rem; color: var(--text-light);
+            max-width: 620px; margin-bottom: 48px;
+        }
+
+        /* ABOUT */
+        .about { background: var(--warm-white); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .about-text p { margin-bottom: 16px; color: var(--text); font-size: 0.95rem; }
+        .about-quals {
+            display: flex; flex-direction: column; gap: 14px;
+            margin-top: 0;
+        }
+        .qual-item {
+            display: flex; align-items: flex-start; gap: 14px;
+            padding: 16px 20px;
+            background: var(--cream);
+            border-radius: var(--radius);
+        }
+        .qual-icon {
+            width: 40px; height: 40px; min-width: 40px;
+            background: white;
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem;
+        }
+        .qual-item strong { display: block; font-size: 0.9rem; margin-bottom: 2px; }
+        .qual-item span { font-size: 0.82rem; color: var(--text-light); }
+
+        /* SUBJECTS */
+        .subjects { background: var(--cream); }
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .subject-card {
+            background: white;
+            padding: 28px 22px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .subject-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        }
+        .subject-card-icon { font-size: 2rem; margin-bottom: 12px; }
+        .subject-card h3 { font-size: 1rem; margin-bottom: 6px; color: var(--charcoal); }
+        .subject-card p { font-size: 0.82rem; color: var(--text-light); }
+
+        /* TOPICS BY LEVEL */
+        .topics-by-level { display: flex; flex-direction: column; gap: 24px; }
+        .topic-level {
+            background: white;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            padding: 28px 30px;
+            transition: box-shadow 0.25s;
+        }
+        .topic-level:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .topic-level-header {
+            display: flex; align-items: center; gap: 14px;
+            margin-bottom: 16px;
+        }
+        .topic-level-header h3 { font-size: 1.05rem; color: var(--charcoal); }
+        .topic-level-badge {
+            font-size: 0.7rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.08em;
+            padding: 4px 12px; border-radius: 6px;
+            white-space: nowrap;
+        }
+        .badge-primary { background: #EDE9FE; color: #7C3AED; }
+        .badge-secondary { background: var(--blue-light); color: var(--blue); }
+        .badge-gcse { background: var(--sage-light); color: var(--sage-dark); }
+        .badge-alevel { background: var(--coral-light); color: var(--coral); }
+        .badge-adult { background: var(--gold-light); color: #9A7B2E; }
+        .topic-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .topic-tags span {
+            background: var(--cream);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            color: var(--text);
+            border: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .topic-tags span:hover { border-color: var(--border); }
+
+        /* APPROACH */
+        .approach { background: var(--warm-white); }
+        .approach-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        .approach-card {
+            background: white;
+            padding: 30px 26px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .approach-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+        }
+        .approach-card-num {
+            width: 36px; height: 36px;
+            background: var(--sage-light);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem; font-weight: 700; color: var(--sage-dark);
+            margin-bottom: 16px;
+        }
+        .approach-card h3 { font-size: 1.05rem; margin-bottom: 10px; color: var(--charcoal); }
+        .approach-card p { font-size: 0.88rem; color: var(--text-light); }
+
+        .approach-promise {
+            background: var(--sage-light);
+            border-radius: 16px;
+            padding: 32px 36px;
+            display: flex; gap: 40px;
+        }
+        .approach-promise-item {
+            flex: 1;
+            display: flex; align-items: flex-start; gap: 12px;
+        }
+        .approach-promise-icon { font-size: 1.4rem; min-width: 28px; }
+        .approach-promise-item strong { display: block; font-size: 0.9rem; margin-bottom: 3px; color: var(--sage-dark); }
+        .approach-promise-item span { font-size: 0.82rem; color: var(--text-light); }
+
+        /* PRICING */
+        .pricing { background: var(--cream); }
+        .pricing-subtitle {
+            font-size: 1.1rem; font-weight: 600; color: var(--charcoal);
+            margin-bottom: 20px; margin-top: 8px;
+        }
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        .pricing-card {
+            background: white;
+            padding: 34px 26px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            text-align: center;
+            position: relative;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+        }
+        .pricing-card.featured {
+            border-color: var(--sage);
+            box-shadow: 0 4px 24px rgba(91,123,106,0.12);
+        }
+        .pricing-card.featured::before {
+            content: 'Best Value';
+            position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+            background: var(--sage); color: white;
+            font-size: 0.72rem; font-weight: 600;
+            padding: 4px 16px; border-radius: 12px;
+            text-transform: uppercase; letter-spacing: 0.06em;
+        }
+        .pricing-type-badge {
+            display: inline-block;
+            font-size: 0.7rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.08em;
+            padding: 4px 12px; border-radius: 6px;
+            margin-bottom: 12px;
+        }
+        .badge-one { background: var(--sage-light); color: var(--sage-dark); }
+        .badge-batch { background: var(--blue-light); color: var(--blue); }
+        .pricing-card h3 { font-size: 1.05rem; color: var(--charcoal); margin-bottom: 6px; }
+        .pricing-card .price {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.2rem; color: var(--sage-dark);
+            margin: 14px 0 4px;
+        }
+        .pricing-card .price-note { font-size: 0.82rem; color: var(--text-light); margin-bottom: 16px; }
+        .pricing-card .price-save {
+            display: inline-block;
+            background: var(--coral-light); color: var(--coral);
+            font-size: 0.76rem; font-weight: 600;
+            padding: 4px 10px; border-radius: 6px;
+            margin-bottom: 18px;
+        }
+        .pricing-features { list-style: none; text-align: left; margin-bottom: 22px; }
+        .pricing-features li {
+            padding: 7px 0; font-size: 0.85rem; color: var(--text);
+            display: flex; align-items: center; gap: 10px;
+        }
+        .pricing-features li::before {
+            content: '✓'; color: var(--sage); font-weight: 700; font-size: 0.85rem;
+        }
+
+        /* BATCH SECTION */
+        .batch-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        .batch-card {
+            background: white;
+            padding: 34px 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .batch-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+        }
+        .batch-card-icon { font-size: 2rem; margin-bottom: 14px; }
+        .batch-card h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--charcoal); }
+        .batch-card p { font-size: 0.88rem; color: var(--text-light); margin-bottom: 18px; }
+        .batch-card-details { font-size: 0.84rem; color: var(--text); }
+        .batch-card-details li {
+            list-style: none; padding: 5px 0;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .batch-card-details li::before { content: '→'; color: var(--sage); font-weight: 600; }
+
+        /* TESTIMONIALS */
+        .testimonials { background: var(--warm-white); }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+        .testimonial-stars { color: var(--gold); font-size: 0.85rem; margin-bottom: 14px; letter-spacing: 2px; }
+        .testimonial-text {
+            font-size: 0.92rem; color: var(--text);
+            font-style: italic; margin-bottom: 18px;
+            line-height: 1.7;
+        }
+        .testimonial-author {
+            display: flex; align-items: center; gap: 12px;
+        }
+        .testimonial-avatar {
+            width: 40px; height: 40px;
+            background: var(--sage-light);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 600; color: var(--sage-dark); font-size: 0.85rem;
+        }
+        .testimonial-name { font-weight: 600; font-size: 0.88rem; }
+        .testimonial-role { font-size: 0.76rem; color: var(--text-light); }
+
+        /* FAQ */
+        .faq { background: var(--cream); }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .faq-item {
+            background: white;
+            padding: 24px 28px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: box-shadow 0.2s;
+        }
+        .faq-item:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.04); }
+        .faq-q {
+            font-weight: 600; font-size: 0.92rem; color: var(--charcoal);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .faq-q::after {
+            content: '+'; font-size: 1.3rem; color: var(--sage);
+            transition: transform 0.3s; min-width: 20px; text-align: center;
+        }
+        .faq-item.open .faq-q::after { content: '−'; }
+        .faq-a {
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.35s ease, margin 0.35s;
+            font-size: 0.88rem; color: var(--text-light); line-height: 1.7;
+        }
+        .faq-item.open .faq-a { max-height: 200px; margin-top: 14px; }
+
+        /* FREE LESSON BANNER */
+        .free-banner {
+            background: var(--sage-dark);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .free-banner h2 { color: white; font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 12px; }
+        .free-banner p { color: rgba(255,255,255,0.8); max-width: 540px; margin: 0 auto 28px; font-size: 1.02rem; }
+        .btn-white {
+            background: white; color: var(--sage-dark);
+            padding: 14px 32px; border-radius: 10px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem; font-weight: 600;
+            text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+            transition: all 0.25s; border: none; cursor: pointer;
+        }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+
+        /* CONTACT */
+        .contact { background: var(--warm-white); padding: 80px 0; }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+        .contact-info h3 { font-size: 1.3rem; margin-bottom: 16px; color: var(--charcoal); }
+        .contact-info p { color: var(--text-light); margin-bottom: 28px; font-size: 0.95rem; }
+        .contact-detail {
+            display: flex; align-items: center; gap: 14px;
+            padding: 12px 0;
+        }
+        .contact-detail-icon {
+            width: 44px; height: 44px; min-width: 44px;
+            background: var(--sage-light);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem;
+        }
+        .contact-detail strong { display: block; font-size: 0.88rem; }
+        .contact-detail span { font-size: 0.82rem; color: var(--text-light); }
+
+        .contact-form {
+            background: var(--cream);
+            padding: 36px;
+            border-radius: 16px;
+        }
+        .form-group { margin-bottom: 16px; }
+        .form-group label {
+            display: block; font-size: 0.85rem; font-weight: 500;
+            margin-bottom: 6px; color: var(--text);
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 12px 16px;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9rem; color: var(--text);
+            background: white;
+            transition: border-color 0.2s;
+            outline: none;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--sage);
+        }
+        .form-group textarea { resize: vertical; min-height: 90px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .form-submit {
+            width: 100%;
+            background: var(--sage); color: white;
+            padding: 14px; border: none; border-radius: 10px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem; font-weight: 600;
+            cursor: pointer; transition: background 0.2s;
+        }
+        .form-submit:hover { background: var(--sage-dark); }
+
+        /* FOOTER */
+        footer {
+            background: var(--charcoal);
+            color: rgba(255,255,255,0.6);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        footer a:hover { color: white; }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; flex-direction: column;
+                position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+                background: var(--cream);
+                justify-content: center; align-items: center;
+                gap: 24px; z-index: 99;
+            }
+            .nav-links.open { display: flex; }
+            .nav-links a { font-size: 1.2rem; }
+            .hamburger { display: block; }
+
+            .hero .container { grid-template-columns: 1fr; gap: 36px; }
+            .hero-visual { order: -1; }
+            .hero-card { max-width: 100%; }
+            .float-tag.tag-rating { right: 0; }
+            .float-tag.tag-free { left: 0; }
+            .float-tag.tag-online { left: 0; top: 40%; }
+            .hero { padding: 110px 0 60px; }
+            .hero-stats { gap: 16px; }
+
+            .about-grid { grid-template-columns: 1fr; gap: 32px; }
+            .subjects-grid { grid-template-columns: 1fr 1fr; }
+            .approach-cards { grid-template-columns: 1fr; }
+            .approach-promise { flex-direction: column; gap: 20px; }
+            .pricing-cards { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; margin-bottom: 48px; }
+            .batch-cards { grid-template-columns: 1fr; }
+            .testimonial-grid { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+
+            section { padding: 60px 0; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.9rem; }
+            .hero-actions { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+            .subjects-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ANIMATIONS */
+        .fade-in {
+            opacity: 0; transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+    <div class="container">
+        <a href="#" class="nav-logo">Maths <span>with</span> Shaily</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about" onclick="closeMenu()">About</a></li>
+            <li><a href="#approach" onclick="closeMenu()">Approach</a></li>
+            <li><a href="#pricing" onclick="closeMenu()">Pricing</a></li>
+            <li><a href="#testimonials" onclick="closeMenu()">Reviews</a></li>
+            <li><a href="#faq" onclick="closeMenu()">FAQ</a></li>
+            <li><a href="#contact" onclick="closeMenu()" class="nav-cta">Book Free Lesson</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01z"/></svg>
+                4.9 Rated · Super Tutor · QTS Qualified
+            </div>
+            <h1>Maths tutoring that builds <em>confidence</em></h1>
+            <p class="hero-desc">Qualified teacher helping students of all ages — GCSE, A-Level, and adult learners — feel supported, capable, and in control of their maths learning. 1:1 and small group sessions, all online.</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-num">QTS</div>
+                    <div class="hero-stat-label">Qualified Teacher</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">4.9★</div>
+                    <div class="hero-stat-label">Average Rating</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">100%</div>
+                    <div class="hero-stat-label">Online</div>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Book a Free Lesson →</a>
+                <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-card">
+                <div class="float-tag tag-rating">⭐ 4.9 from 7 reviews</div>
+                <div class="float-tag tag-free">🎁 1st lesson free</div>
+                <div class="float-tag tag-online">💻 100% Online</div>
+                <div class="hero-card-icon">📐</div>
+                <h3>GCSE & A-Level Maths</h3>
+                <p>1:1 or small group sessions, tailored to each student's needs and exam board.</p>
+                <div class="hero-card-levels">
+                    <span class="level-tag">Secondary</span>
+                    <span class="level-tag">GCSE</span>
+                    <span class="level-tag">A-Level</span>
+                    <span class="level-tag">Adult Learners</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-text fade-in">
+                <p class="section-label">About Shaily</p>
+                <h2 class="section-title">Patient, qualified, and passionate about maths</h2>
+                <p>I am a qualified teacher (QTS) with a background in Architecture (B.Arch.) and extensive experience teaching and tutoring GCSE and A-Level Maths. My academic and professional journey has given me a strong foundation in logical thinking, problem-solving, and clear communication — skills that are essential for success in Maths.</p>
+                <p>I chose to teach because I genuinely enjoy helping students understand topics they once found difficult and watching their confidence grow. Many students come to me feeling unsure or anxious about Maths — my role is to help them feel supported, capable, and in control of their learning.</p>
+                <p>I am known for being patient, calm, and approachable, and I take time to understand how each student learns best. I believe that with the right guidance and encouragement, every student can make progress — whether the goal is to build confidence, close gaps in understanding, or aim for higher grades.</p>
+                <p>Parents can be assured that I teach in a structured, professional, and supportive manner, with a clear focus on the curriculum and exam expectations. I take pride in being reliable, well-prepared, and committed to each student's success.</p>
+                <p>I also currently teach GCSE and A-Level Maths at an adult education college, working with mature students returning to education — whether for career changes, university access courses, or personal development. This experience has made me even more adaptable as a tutor, comfortable working with learners of all ages and backgrounds.</p>
+            </div>
+            <div class="about-quals fade-in">
+                <div class="qual-item">
+                    <div class="qual-icon">🎓</div>
+                    <div>
+                        <strong>Qualified Teacher Status (QTS)</strong>
+                        <span>Fully qualified to teach in UK schools</span>
+                    </div>
+                </div>
+                <div class="qual-item">
+                    <div class="qual-icon">📐</div>
+                    <div>
+                        <strong>B.Arch. (Architecture)</strong>
+                        <span>Strong foundation in logic and spatial reasoning</span>
+                    </div>
+                </div>
+                <div class="qual-item">
+                    <div class="qual-icon">🏫</div>
+                    <div>
+                        <strong>Secondary School Experience</strong>
+                        <span>Classroom teacher with deep curriculum knowledge</span>
+                    </div>
+                </div>
+                <div class="qual-item">
+                    <div class="qual-icon">💻</div>
+                    <div>
+                        <strong>100% Online</strong>
+                        <span>Learn from the comfort of your home</span>
+                    </div>
+                </div>
+                <div class="qual-item">
+                    <div class="qual-icon">👥</div>
+                    <div>
+                        <strong>1:1 & Small Groups</strong>
+                        <span>Individual attention or collaborative batch sessions</span>
+                    </div>
+                </div>
+                <div class="qual-item">
+                    <div class="qual-icon">📊</div>
+                    <div>
+                        <strong>Exam-Board Aligned</strong>
+                        <span>Understands how exams are marked and what examiners look for</span>
+                    </div>
+                </div>
+                <div class="qual-item">
+                    <div class="qual-icon">🎓</div>
+                    <div>
+                        <strong>Adult Education Teacher</strong>
+                        <span>Currently teaching GCSE & A-Level at an adult college</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TOPICS -->
+<section class="subjects" id="subjects">
+    <div class="container">
+        <p class="section-label fade-in">Topics Covered</p>
+        <h2 class="section-title fade-in">From foundations to advanced problem-solving</h2>
+        <p class="section-desc fade-in">I teach across Secondary, GCSE, A-Level, and adult learners, covering the full curriculum. Here's an overview of what we work on at each level.</p>
+
+        <div class="topics-by-level">
+            <div class="topic-level fade-in">
+                <div class="topic-level-header">
+                    <span class="topic-level-badge badge-secondary">KS3</span>
+                    <h3>Secondary</h3>
+                </div>
+                <div class="topic-tags">
+                    <span>Negative Numbers &amp; BIDMAS</span>
+                    <span>Algebraic Expressions</span>
+                    <span>Linear Equations</span>
+                    <span>Ratio &amp; Proportion</span>
+                    <span>Coordinates &amp; Graphs</span>
+                    <span>Angles &amp; Polygons</span>
+                    <span>Area, Perimeter &amp; Volume</span>
+                    <span>Transformations</span>
+                    <span>Probability</span>
+                    <span>Sequences</span>
+                </div>
+            </div>
+
+            <div class="topic-level fade-in">
+                <div class="topic-level-header">
+                    <span class="topic-level-badge badge-gcse">GCSE</span>
+                    <h3>GCSE (Foundation & Higher)</h3>
+                </div>
+                <div class="topic-tags">
+                    <span>Algebra — Quadratics &amp; Simultaneous Equations</span>
+                    <span>Surds &amp; Indices</span>
+                    <span>Trigonometry (SOH CAH TOA &amp; Sine/Cosine Rule)</span>
+                    <span>Circle Theorems</span>
+                    <span>Probability &amp; Venn Diagrams</span>
+                    <span>Vectors</span>
+                    <span>Compound Interest &amp; Growth/Decay</span>
+                    <span>Inequalities &amp; Graphs</span>
+                    <span>Pythagoras' Theorem</span>
+                    <span>Statistics — Averages, Histograms &amp; Cumulative Frequency</span>
+                    <span>Proof</span>
+                    <span>Exam Technique &amp; Past Papers</span>
+                </div>
+            </div>
+
+            <div class="topic-level fade-in">
+                <div class="topic-level-header">
+                    <span class="topic-level-badge badge-alevel">A-Level</span>
+                    <h3>A-Level (AS & A2)</h3>
+                </div>
+                <div class="topic-tags">
+                    <span>Pure — Differentiation &amp; Integration</span>
+                    <span>Pure — Exponentials &amp; Logarithms</span>
+                    <span>Pure — Trigonometric Identities &amp; Equations</span>
+                    <span>Pure — Sequences &amp; Series</span>
+                    <span>Pure — Coordinate Geometry &amp; Parametric Equations</span>
+                    <span>Pure — Binomial Expansion</span>
+                    <span>Statistics — Distributions &amp; Hypothesis Testing</span>
+                    <span>Mechanics — Forces, Motion &amp; Kinematics</span>
+                    <span>Proof &amp; Mathematical Reasoning</span>
+                    <span>Exam Technique &amp; Past Papers</span>
+                </div>
+            </div>
+
+            <div class="topic-level fade-in">
+                <div class="topic-level-header">
+                    <span class="topic-level-badge badge-adult">Adult Learners</span>
+                    <h3>Functional Skills & GCSE Resits</h3>
+                </div>
+                <div class="topic-tags">
+                    <span>Functional Skills (Entry Level – Level 2)</span>
+                    <span>GCSE Resits for Adults</span>
+                    <span>Numeracy Confidence Building</span>
+                    <span>Access to Higher Education Maths</span>
+                    <span>Career Change Preparation</span>
+                    <span>Flexible Pacing &amp; No Judgement</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach" id="approach">
+    <div class="container">
+        <p class="section-label fade-in">Teaching Approach</p>
+        <h2 class="section-title fade-in">Clear, structured lessons designed for results</h2>
+        <p class="section-desc fade-in">Each lesson is carefully planned around the curriculum and tailored to the individual student. I focus on building strong foundations first, then developing problem-solving skills and exam technique, so students feel prepared and in control.</p>
+        <div class="approach-cards">
+            <div class="approach-card fade-in">
+                <div class="approach-card-num">1</div>
+                <h3>Review & Reinforce</h3>
+                <p>Every lesson starts with a short review of previous topics to strengthen retention and build connections between concepts.</p>
+            </div>
+            <div class="approach-card fade-in">
+                <div class="approach-card-num">2</div>
+                <h3>Step-by-Step Clarity</h3>
+                <p>Clear explanations using visual methods and worked examples, followed by guided practice to build confidence before working independently.</p>
+            </div>
+            <div class="approach-card fade-in">
+                <div class="approach-card-num">3</div>
+                <h3>Exam-Style Practice</h3>
+                <p>Apply learning through exam-style questions to improve accuracy and timing, with constructive feedback and clear next steps.</p>
+            </div>
+        </div>
+        <div class="approach-promise fade-in">
+            <div class="approach-promise-item">
+                <div class="approach-promise-icon">🎯</div>
+                <div>
+                    <strong>Adapted to Every Learner</strong>
+                    <span>I adapt my teaching to suit different learning styles and paces, ensuring students are never rushed or left confused.</span>
+                </div>
+            </div>
+            <div class="approach-promise-item">
+                <div class="approach-promise-icon">💬</div>
+                <div>
+                    <strong>Parents Kept Informed</strong>
+                    <span>Regular updates on progress, strengths, and areas for improvement so you always know how your child is doing.</span>
+                </div>
+            </div>
+            <div class="approach-promise-item">
+                <div class="approach-promise-icon">🌟</div>
+                <div>
+                    <strong>Beyond Just Passing</strong>
+                    <span>My goal is to help students understand Maths, build lasting confidence, and achieve their full potential.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+    <div class="container">
+        <p class="section-label fade-in">Pricing</p>
+        <h2 class="section-title fade-in">Simple, transparent pricing</h2>
+        <p class="section-desc fade-in">All sessions are online. The first 30-minute introductory lesson is completely free — no obligation, just a chance to see if we're the right fit.</p>
+
+        <h3 class="pricing-subtitle fade-in">1:1 Online Tuition</h3>
+        <div class="pricing-cards">
+            <div class="pricing-card fade-in">
+                <span class="pricing-type-badge badge-one">1:1 Online</span>
+                <h3>Single Lesson</h3>
+                <div class="price">£25</div>
+                <div class="price-note">per hour</div>
+                <ul class="pricing-features">
+                    <li>Tailored to your level & exam board</li>
+                    <li>Flexible scheduling</li>
+                    <li>Resources included</li>
+                    <li>Progress feedback</li>
+                </ul>
+                <a href="#contact" class="btn btn-secondary" style="width:100%;justify-content:center;">Get Started</a>
+            </div>
+            <div class="pricing-card fade-in">
+                <span class="pricing-type-badge badge-one">1:1 Online</span>
+                <h3>5-Lesson Pack</h3>
+                <div class="price">£115</div>
+                <div class="price-note">£23 per hour</div>
+                <span class="price-save">Save £10</span>
+                <ul class="pricing-features">
+                    <li>Everything in Single</li>
+                    <li>Structured learning plan</li>
+                    <li>Priority booking</li>
+                    <li>Regular parent updates</li>
+                </ul>
+                <a href="#contact" class="btn btn-secondary" style="width:100%;justify-content:center;">Get Started</a>
+            </div>
+            <div class="pricing-card featured fade-in">
+                <span class="pricing-type-badge badge-one">1:1 Online</span>
+                <h3>10-Lesson Pack</h3>
+                <div class="price">£210</div>
+                <div class="price-note">£21 per hour</div>
+                <span class="price-save">Save £40</span>
+                <ul class="pricing-features">
+                    <li>Everything in 5-Pack</li>
+                    <li>Personalised revision plan</li>
+                    <li>Exam prep & past papers</li>
+                    <li>Best value for results</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Get Started</a>
+            </div>
+        </div>
+
+        <h3 class="pricing-subtitle fade-in">Small Group Sessions</h3>
+        <div class="batch-cards">
+            <div class="batch-card fade-in">
+                <div class="batch-card-icon">👥</div>
+                <h3>Regular Batch</h3>
+                <p>Ongoing small group sessions for students at the same level. Learn together, stay motivated, and benefit from a structured weekly programme — at a lower cost per student.</p>
+                <ul class="batch-card-details">
+                    <li>Small groups (3–6 students)</li>
+                    <li>Weekly sessions, same time each week</li>
+                    <li>Grouped by level (GCSE / A-Level)</li>
+                    <li>Collaborative learning environment</li>
+                </ul>
+                <br>
+                <a href="#contact" class="btn btn-secondary">Enquire About Availability</a>
+            </div>
+            <div class="batch-card fade-in">
+                <div class="batch-card-icon">🏖️</div>
+                <h3>Holiday Intensive</h3>
+                <p>Focused revision courses during half-terms, Easter, and summer holidays. Perfect for catching up, reinforcing key topics, or intensive exam preparation.</p>
+                <ul class="batch-card-details">
+                    <li>Small groups (3–6 students)</li>
+                    <li>Multi-day intensive blocks</li>
+                    <li>Topic-focused or exam revision</li>
+                    <li>Great for pre-exam confidence boost</li>
+                </ul>
+                <br>
+                <a href="#contact" class="btn btn-secondary">Register Interest</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <p class="section-label fade-in">What Parents & Students Say</p>
+        <h2 class="section-title fade-in">Real feedback from real families</h2>
+        <p class="section-desc fade-in">Hear from parents and students who have experienced the difference that patient, structured tutoring makes.</p>
+        <div class="testimonial-grid">
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Her explanations are clear and well-structured, which has helped develop a better understanding of key concepts. I particularly value the way she encourages logical thinking and problem-solving. Her willingness to clarify doubts and revisit topics creates a supportive learning environment and makes students feel more confident in asking questions."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">A</div>
+                    <div>
+                        <div class="testimonial-name">Archana</div>
+                        <div class="testimonial-role">Parent</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-stars">★★★★</div>
+                <p class="testimonial-text">"It was only my daughter's first lesson but she got on well with the teacher and felt very positive. We're looking forward to continuing with Shaily."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">R</div>
+                    <div>
+                        <div class="testimonial-name">Robert</div>
+                        <div class="testimonial-role">Parent</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Excellent and dedicated tutor. Shaily has made a real difference to my child's confidence in Maths."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">V</div>
+                    <div>
+                        <div class="testimonial-name">Vriti</div>
+                        <div class="testimonial-role">Parent</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"I used to think I was bad at Maths, but Shaily helped me work through topics step by step and fill in the gaps. My confidence grew and my results improved. I now feel I can actually do Maths."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">S</div>
+                    <div>
+                        <div class="testimonial-name">Student</div>
+                        <div class="testimonial-role">GCSE Student</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+    <div class="container">
+        <p class="section-label fade-in">Frequently Asked Questions</p>
+        <h2 class="section-title fade-in">Everything you need to know</h2>
+        <p class="section-desc fade-in">Common questions from parents and students about how tutoring with Shaily works.</p>
+        <div class="faq-grid">
+            <div class="faq-item fade-in" onclick="this.classList.toggle('open')">
+                <div class="faq-q">What inspired you to become a maths tutor?</div>
+                <div class="faq-a">I've always enjoyed Maths, especially problem-solving and logical thinking, which led me to study Architecture. Over time, I realised I didn't just enjoy using Maths — I truly enjoyed helping others understand it. My interest in private tutoring grew when I started working with GCSE and A-Level students one-to-one and saw how much difference personalised support made.</div>
+            </div>
+            <div class="faq-item fade-in" onclick="this.classList.toggle('open')">
+                <div class="faq-q">What levels and exam boards do you cover?</div>
+                <div class="faq-a">I teach Secondary (KS3), GCSE (Foundation and Higher), A-Level (AS and A2), and adult learners. My lessons are carefully planned around the curriculum, and I understand how exams are marked and what students need to succeed across all major exam boards.</div>
+            </div>
+            <div class="faq-item fade-in" onclick="this.classList.toggle('open')">
+                <div class="faq-q">How is the free introductory lesson structured?</div>
+                <div class="faq-a">The free 30-minute session is a chance for me to understand your child's current level, what they're finding difficult, and what their goals are. It's also an opportunity for the student to see if they feel comfortable with my teaching style. There's no obligation to continue.</div>
+            </div>
+            <div class="faq-item fade-in" onclick="this.classList.toggle('open')">
+                <div class="faq-q">What makes a good maths tutor?</div>
+                <div class="faq-a">A good tutor needs to be patient, approachable, and able to explain things clearly. Everyone learns differently, so it's important to adapt explanations and pace to suit the student. Building confidence is just as important as teaching content, especially in Maths.</div>
+            </div>
+            <div class="faq-item fade-in" onclick="this.classList.toggle('open')">
+                <div class="faq-q">Do you teach adult learners?</div>
+                <div class="faq-a">Yes! I currently teach GCSE and A-Level Maths at an adult education college. I work with mature students returning to education for career changes, university access courses, functional skills, or simply to build confidence with numbers. Adults are very welcome — I adapt my approach to suit your pace and goals.</div>
+            </div>
+            <div class="faq-item fade-in" onclick="this.classList.toggle('open')">
+                <div class="faq-q">Do you only teach online?</div>
+                <div class="faq-a">All 1:1 sessions are delivered online, which gives students the comfort of learning from home and makes scheduling much easier. For small group batch sessions, in-person options may be available — please get in touch to discuss.</div>
+            </div>
+            <div class="faq-item fade-in" onclick="this.classList.toggle('open')">
+                <div class="faq-q">How do batch / group sessions work?</div>
+                <div class="faq-a">Batch sessions are small groups of 3–6 students at the same level. Regular batches run weekly on a set schedule. Holiday intensives run as focused multi-day blocks during school breaks. Both offer a collaborative learning environment at a lower per-student cost.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FREE LESSON CTA -->
+<section class="free-banner">
+    <div class="container">
+        <h2>Try a Free 30-Minute Lesson</h2>
+        <p>See if we're the right fit — no commitment, no pressure. Just a chance to meet, understand your child's needs, and see how I can help them feel confident in Maths.</p>
+        <a href="#contact" class="btn-white">Book Your Free Lesson →</a>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info fade-in">
+                <p class="section-label">Get in Touch</p>
+                <h2 class="section-title">Let's get started</h2>
+                <p>Whether you have questions about lessons, want to enquire about group sessions, or would like to book your free introductory session, I'd love to hear from you. I typically respond within a few hours.</p>
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">💻</div>
+                    <div>
+                        <strong>Lessons</strong>
+                        <span>100% online via Zoom / Google Meet</span>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">📧</div>
+                    <div>
+                        <strong>Email</strong>
+                        <span>maths@talvika.com</span>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">⏰</div>
+                    <div>
+                        <strong>Availability</strong>
+                        <span>Weekdays after school & weekends</span>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">⚡</div>
+                    <div>
+                        <strong>Response Time</strong>
+                        <span>Usually within a few hours</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form fade-in">
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="e.g. Sarah Johnson" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="sarah@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone (optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="07xxx xxxxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="level">Student Level</label>
+                            <select id="level" name="level">
+                                <option value="">Select level</option>
+                                <option>Secondary (KS3)</option>
+                                <option>GCSE (Foundation)</option>
+                                <option>GCSE (Higher)</option>
+                                <option>A-Level</option>
+                                <option>Adult — GCSE Resit</option>
+                                <option>Adult — Functional Skills</option>
+                                <option>Adult — Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="session-type">Session Type</label>
+                        <select id="session-type" name="session-type">
+                            <option value="">What are you interested in?</option>
+                            <option>1:1 Online Tuition</option>
+                            <option>Regular Batch (Small Group)</option>
+                            <option>Holiday Intensive</option>
+                            <option>Free Introductory Lesson</option>
+                            <option>Not sure — need advice</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell me about your child's needs</label>
+                        <textarea id="message" name="message" placeholder="What topics need help? What are the goals? Any upcoming exams? (Adults: tell me about your situation and what you'd like to achieve.)"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p style="font-family:'DM Serif Display',serif; font-size:1.1rem; color:rgba(255,255,255,0.85); margin-bottom:12px;">Maths with Shaily</p>
+        <p>Qualified Maths Tutor (QTS) · Secondary, GCSE & A-Level · Adult Learners · Online</p>
+        <p style="margin-top:8px;">
+            <a href="#about">About</a> · <a href="#approach">Approach</a> · <a href="#pricing">Pricing</a> · <a href="#contact">Contact</a>
+        </p>
+        <p style="margin-top:16px; font-size:0.78rem;">&copy; 2026 Maths with Shaily. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+        document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile menu
+    function toggleMenu() {
+        document.getElementById('navLinks').classList.toggle('open');
+        document.getElementById('hamburger').classList.toggle('open');
+    }
+    function closeMenu() {
+        document.getElementById('navLinks').classList.remove('open');
+        document.getElementById('hamburger').classList.remove('open');
+    }
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Form handler (replace with Formspree or similar)
+    function handleSubmit(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('.form-submit');
+        const orig = btn.textContent;
+        btn.textContent = '✓ Message Sent — I\'ll be in touch soon!';
+        btn.style.background = '#3D5A4B';
+        setTimeout(() => {
+            btn.textContent = orig;
+            btn.style.background = '';
+            e.target.reset();
+        }, 4000);
+    }
+</script>
+
+</body>
+</html>
