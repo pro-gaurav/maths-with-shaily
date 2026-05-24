@@ -654,7 +654,28 @@
             margin-top: 4px;
             font-weight: 500;
         }
-
+/* MESSENGER CHAT */
+        .chat-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: #0084FF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0, 132, 255, 0.3);
+            z-index: 99;
+            transition: transform 0.25s, box-shadow 0.25s;
+            text-decoration: none;
+        }
+        .chat-float:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 24px rgba(0, 132, 255, 0.4);
+        }
+        .chat-float svg { width: 28px; height: 28px; fill: white; }
         /* FOOTER */
         footer {
             background: var(--charcoal);
@@ -1361,6 +1382,8 @@
         });
     }
 </script>
-
+<a href="https://m.me/MathsWithShaily" target="_blank" class="chat-float" aria-label="Chat on Messenger">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.2 5.42 3.15 7.2V22l2.97-1.63c.84.23 1.74.36 2.67.36h.21c5.64 0 10-4.13 10-9.7S17.64 2 12 2zm1.05 13.06l-2.55-2.73L5.24 15.2l5.73-6.08 2.55 2.73 5.23-2.87-5.7 6.08z"/></svg>
+</a>
 </body>
 </html>
